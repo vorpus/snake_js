@@ -71,15 +71,32 @@ class Board {
     this.snake = new Snake();
     this.apples = [];
     this.newApple();
-    this.gameOver = false;
+  }
+
+  deadSnake() {
+    this.snake = new Snake();
   }
 
   snakeBounds () {
     let snakeHead = this.snake.segments[this.snake.segments.length-1].getCoord();
     if (snakeHead[0] > 19 || snakeHead[0] < 0 || snakeHead[1] > 19 || snakeHead[1] < 0) {
-      // this.gameOver = true;
       console.log('you lose');
+      return true;
     }
+  }
+
+  snakeSuicide() {
+    let snakeHead = this.snake.segments[this.snake.segments.length-1];
+    let snakeBody = this.snake.segments.slice(0, this.snake.segments.length-1);
+
+    let suicide = false;
+    snakeBody.forEach( (body) => {
+      if (body.equals(snakeHead)) {
+        console.log('you suicided');
+        suicide = true;
+      }
+    });
+    return suicide;
   }
 
   snakeEating() {

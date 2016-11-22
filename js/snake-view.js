@@ -11,13 +11,14 @@ class View {
     });
 
     // window.setTimeout(() => {
-    while (!this.board.gameOver) {
       window.setInterval(() => {
         this.step();
         this.render();
-        // this.board.snakeBounds();
-      }, 500);
-    }
+        if (this.board.snakeBounds() || this.board.snakeSuicide()) {
+          this.board.deadSnake();
+        }
+
+      }, 50);
 
   }
 
@@ -68,7 +69,7 @@ class View {
       default:
         console.log('invalid key');
     }
-    console.log(this.board.snake.direction);
+    // console.log(this.board.snake.direction);
   }
 
   step () {
