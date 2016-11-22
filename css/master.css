@@ -1,0 +1,49 @@
+head, body, h1, h2, p, ul, li {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+h1 {
+  width: 450px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+ul {
+
+}
+
+.snake {
+  width: 450px;
+  margin: auto;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display:block;
+}
+
+li {
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: lightblue;
+  border: 1px solid #eee;
+
+  float:left;
+}
+
+.snek {
+  background: green;
+}
+
+.apple {
+  background: red;
+}
