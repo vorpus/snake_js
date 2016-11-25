@@ -7,21 +7,27 @@ head, body, h1, h2, p, ul, li {
 	vertical-align: baseline;
 }
 
+title {
+
+}
+
 h1 {
-  width: 450px;
+  /*width: 450px;*/
   text-align: center;
+  font-family: sans-serif;
   margin: auto;
   margin-bottom: 30px;
-  font-size: 20px;
+  font-size: 46px;
 }
 
 ul {
-
 }
 
 .snake {
-  width: 450px;
-  margin: auto;
+  width: 100%;
+  min-width: 450px;
+  float:left;
+  margin: 0 auto;
 }
 
 .group:after {
@@ -32,10 +38,11 @@ ul {
 
 li {
   list-style: none;
-  width: 20px;
+  width: 5%;
   height: 20px;
   background: lightblue;
   border: 1px solid #eee;
+  box-sizing: border-box;
 
   float:left;
 }
