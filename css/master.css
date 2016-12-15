@@ -12,10 +12,10 @@ title {
 }
 
 h1 {
-  /*width: 450px;*/
+  width: 450px;
   text-align: center;
   font-family: sans-serif;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 30px;
   font-size: 46px;
 }
@@ -24,9 +24,8 @@ ul {
 }
 
 .snake {
-  width: 100%;
+  width: 450px;
   min-width: 450px;
-  float:left;
   margin: 0 auto;
 }
 
